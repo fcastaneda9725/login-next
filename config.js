@@ -1,3 +1,1 @@
-// module.exports = {
-//   API: 'https://vibox.azurewebsites.net/api/',
-// };
+export const API = 'https://vibox.azurewebsites.net/api/';
