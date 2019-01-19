@@ -1,3 +1,3 @@
-module.exports = {
-  API: 'https://vibox.azurewebsites.net/api/',
-};
+// module.exports = {
+//   API: 'https://vibox.azurewebsites.net/api/',
+// };
