@@ -19,9 +19,8 @@ const Index = () =>
     <p>A proof of concept app, demonstrating the authentication of Next.js application using JWT.</p>
 </Layout>
 
-Index.getInitialProps = ({store}) => {
-    store.dispatch({type: 'FOO', payload: 'foo'}); // component will be able to read from store's state when rendered
-        return {custom: 'custom'};
-  };
-  
+// Index.getInitialProps = function(ctx) {
+//     initialize(ctx);
+//   };
+
   export default connect()(Index)
