@@ -19,8 +19,8 @@ const Index = () =>
     <p>A proof of concept app, demonstrating the authentication of Next.js application using JWT.</p>
 </Layout>
 
-// Index.getInitialProps = function(ctx) {
-//     initialize(ctx);
-//   };
+Index.getInitialProps = function(ctx) {
+    initialize(ctx);
+  };
 
   export default connect()(Index)
