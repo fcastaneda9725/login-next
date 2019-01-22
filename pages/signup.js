@@ -78,5 +78,8 @@ class Signup extends React.Component {
     );
   }
 }
+const mapStateToProps = (state) => (
+  {isAuthenticated: !!state.authentication.token}
+);
 
-export default connect(initStore, null, actions)(Signup);
+export default connect(mapStateToProps, actions)(Signup);
