@@ -6,10 +6,11 @@ import { setCookie, removeCookie, getCookieFromBrowser } from '../../utils/cooki
 
 // gets token from the api and stores it in the redux store and in cookie
 const authenticate = (user , type) => {
-  console.log(user);
+  
   if (type !== 'signin' && type !== 'signup') {
     throw new Error('Wrong API call!');
   }
+
   return (dispatch) => {
     axios.post(`${API}/Login`, user )
       .then((response) => {

@@ -23,4 +23,4 @@ Index.getInitialProps = function(ctx) {
     initialize(ctx);
   };
 
-  export default connect()(Index)
+  export default connect(initStore)(Index)

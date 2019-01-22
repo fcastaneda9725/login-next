@@ -8,7 +8,7 @@ export default function(ctx) {
   if(ctx.isServer) {
     if(ctx.req.headers.cookie) {
       ctx.store.dispatch(actions.reauthenticate(getCookie('token', ctx.req)));
-      applyMiddleware(thunk);
+      // applyMiddleware(thunk);
     }
   } else {
     const token = ctx.store.getState().authentication.token;

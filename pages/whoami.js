@@ -27,5 +27,4 @@ Whoami.getInitialProps = async (ctx) => {
 
 };
 
-
 export default connect(initStore)(Whoami);

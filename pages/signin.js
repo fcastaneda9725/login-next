@@ -6,6 +6,7 @@ import actions from '../redux/actions';
 import initialize from '../utils/initialize';
 import Layout from '../components/Layout';
 
+
 class Signin extends React.Component {
   constructor(props) {
     super(props);
@@ -14,9 +15,11 @@ class Signin extends React.Component {
       password: '',
     };
   }
-
+  
   static getInitialProps (ctx) {
     initialize(ctx);
+    actions;
+    initStore;
   }
 
   handleSubmit(e) {
@@ -26,9 +29,10 @@ class Signin extends React.Component {
       UserName: this.state.email,
       Password: this.state.password
     };
-    console.log(user);
-    this.props.authenticate(user, 'signin');
+    // console.log(user);
+   this.props.authenticate(user,'signin');
   }
+
 
   render() {
     return (
@@ -85,4 +89,8 @@ class Signin extends React.Component {
   }
 }
 
-export default connect(initStore, null, actions)(Signin);
+const mapStateToProps = (state) => (
+  {isAuthenticated: !!state.authentication.token}
+);
+
+export default connect(mapStateToProps, actions)(Signin);
